@@ -1,19 +1,99 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Iteration</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href=".style-for-input.css">
+    <link rel="stylesheet"  type="text/css" href="./style-for-main-form.css">
+    <!--<style>
+        .class {
+            text-align: center;
+            margin-top: 100px;
+
+        }
+        .style-input:focus {
+            background-color: lightblue;
+            border: none;
+        }
+
+        .main-submit{
+            background-color: #18c12d;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+    </style>-->
 
 </head>
 <body>
+<div class="class">
+    <form action="/" method="post">
+        <label id="x00" for="x00">x00</label>
+        <input class="style-input" type="text" name="x00">
+        <label id="x01" for="x01">x01</label>
+        <input class="style-input" type="text" name="x01">
+        <label id="x02" for="x02">x02</label>
+        <input class="style-input" type="text" name="x02">
+        <label id="x03" for="x03">x03</label>
+        <input class="style-input" type="text" name="x03">
 
-<div>Hello world</div>
-<form action="/" method="post">
-    <label id="x00" for="x00">x00</label>
-    <input type="text" name="x00">
-    <label id="x01" for="x01">x00</label>
-    <input type="text" name="x01">
-    <input type="submit">
-</form>
+        <label id="b0" for="x01">b0</label>
+        <input class="style-input" type="text" name="b0">
+
+        <p></p>
+
+        <label id="x10" for="x10">x10</label>
+        <input class="style-input" type="text" name="x10">
+        <label id="x11" for="x11">x11</label>
+        <input class="style-input" type="text" name="x11">
+        <label id="x12" for="x12">x12</label>
+        <input class="style-input" type="text" name="x12">
+        <label id="x13" for="x13">x13</label>
+        <input class="style-input" type="text" name="x13">
+
+        <label id="b1" for="x01">b1</label>
+        <input class="style-input" type="text" name="b1">
+
+        <p></p>
+
+        <label id="x20" for="x20">x20</label>
+        <input class="style-input" type="text" name="x20">
+        <label id="x21" for="x21">x21</label>
+        <input class="style-input" type="text" name="x21">
+        <label id="x22" for="x22">x22</label>
+        <input class="style-input" type="text" name="x22">
+        <label id="x23" for="x23">x23</label>
+        <input class="style-input" type="text" name="x23">
+
+        <label id="b2" for="x01">b2</label>
+        <input class="style-input" type="text" name="b2">
+
+        <p></p>
+
+        <label id="x30" for="x30">x30</label>
+        <input class="style-input" type="text" name="x30">
+        <label id="x31" for="x31">x31</label>
+        <input class="style-input" type="text" name="x31">
+        <label id="x32" for="x32">x32</label>
+        <input class="style-input" type="text" name="x32">
+        <label id="x33" for="x33">x33</label>
+        <input class="style-input" type="text" name="x33">
+
+        <label id="b3" for="x01">b3</label>
+        <input class="style-input" type="text" name="b3">
+
+        <p></p>
+
+        <input class="main-submit" type="submit">
+
+    </form>
+</div>
+
 </body>
 </html>

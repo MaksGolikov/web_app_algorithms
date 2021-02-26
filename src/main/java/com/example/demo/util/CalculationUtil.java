@@ -28,7 +28,11 @@ public class CalculationUtil {
                 3 * iterationData.getB0(), iterationData.getB0() - 6, 15 - iterationData.getB0(), iterationData.getB0() + 2
         };
 
+        for (int i = 0; i < 4; i++) {
+            System.out.println( arrOfAnswer[i]+" ++++++++++");
+        }
         double determinant = DeterminantUtil.determinant(sizeOfMatrix, arrOfCoefficient);
+
 
         double sum = 0;
         for (int i = 0; i < sizeOfMatrix; i++) {
@@ -60,6 +64,9 @@ public class CalculationUtil {
         listOfInitialApproximation.add(2.0);
         listOfInitialApproximation.add(0.5);
 
+        for (int i = 0; i < 4; i++) {
+            System.out.println(listOfInitialApproximation.get(i)+" ++++++++++++++");
+        }
         double [] answerX = new double[sizeOfMatrix];
 
         int k = 0;
@@ -67,6 +74,7 @@ public class CalculationUtil {
 
             arrOfCoefficient[0][0] = (arrOfAnswer[0] - listOfInitialApproximation.get(1) - listOfInitialApproximation.get(2) -
                     listOfInitialApproximation.get(3)) / copyArrOfCoefficient[0][0];
+            System.out.println(arrOfCoefficient[0][0]+" -------------------");
             arrOfCoefficient[0][1] = listOfInitialApproximation.get(1);
             arrOfCoefficient[0][2] = listOfInitialApproximation.get(2);
             arrOfCoefficient[0][3] = listOfInitialApproximation.get(3);
@@ -130,6 +138,11 @@ public class CalculationUtil {
         answerX[1]=list0fXOnMainDiagonal.get(1);
         answerX[2]=list0fXOnMainDiagonal.get(2);
         answerX[3]=list0fXOnMainDiagonal.get(3);
+
+        System.out.printf("x1 = %.3f%n",answerX[0]);
+        System.out.printf("x2 = %.3f%n",answerX[1]);
+        System.out.printf("x3 = %.3f%n",answerX[2]);
+        System.out.printf("x4 = %.3f%n",answerX[3]);
 
 
         return answerX;

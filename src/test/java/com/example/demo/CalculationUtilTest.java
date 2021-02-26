@@ -1,21 +1,25 @@
-package com.example.demo.util;
+package com.example.demo;
 
-import com.example.demo.data.IterationData;
+import com.example.demo.util.DeterminantUtil;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CalculationUtil {
+public class CalculationUtilTest {
+    private static final int numberInList = 30;
     private static final int sizeOfMatrix = 4;
 
-    public static double[] calc(IterationData iterationData) {
+    @Test
+    public void test() {
+
         double[][] arrOfCoefficient = {
-                {iterationData.getX00(), iterationData.getX01(), iterationData.getX02(), iterationData.getX03()},
-                {iterationData.getX10(), iterationData.getX11(), iterationData.getX12(), iterationData.getX13()},
-                {iterationData.getX20(), iterationData.getX21(), iterationData.getX22(), iterationData.getX23()},
-                {iterationData.getX30(), iterationData.getX31(), iterationData.getX32(), iterationData.getX33()}
-        };  //new double[3][3];
+                {5, 1, -1, 1},
+                {1, -4, 1, -1},
+                {-1, 1, 4, 1},
+                {1, 2, 1, -5}
+        };
 
         double[][] copyArrOfCoefficient = new double[sizeOfMatrix][sizeOfMatrix];
         for (int i = 0; i < sizeOfMatrix; i++) {
@@ -25,10 +29,23 @@ public class CalculationUtil {
         }
 
         double[] arrOfAnswer = {
-                3 * iterationData.getB0(), iterationData.getB0() - 6, 15 - iterationData.getB0(), iterationData.getB0() + 2
+                3 * numberInList, numberInList - 6, 15 - numberInList, numberInList + 2
         };
 
-        double determinant = DeterminantUtil.determinant(sizeOfMatrix, arrOfCoefficient);
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(arrOfCoefficient[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < sizeOfMatrix; i++) {
+            System.out.println(arrOfAnswer[i]);
+        }
+
+        DeterminantUtil.determinant(4, arrOfCoefficient);
 
         double sum = 0;
         for (int i = 0; i < sizeOfMatrix; i++) {
@@ -55,7 +72,7 @@ public class CalculationUtil {
         temp.add(0.0);
 
         List<Double> listOfInitialApproximation = new ArrayList<>(4);
-        listOfInitialApproximation.add(0.7 * iterationData.getB0());
+        listOfInitialApproximation.add(0.7 * 30);
         listOfInitialApproximation.add(1.0);
         listOfInitialApproximation.add(2.0);
         listOfInitialApproximation.add(0.5);
@@ -131,7 +148,9 @@ public class CalculationUtil {
         answerX[2]=list0fXOnMainDiagonal.get(2);
         answerX[3]=list0fXOnMainDiagonal.get(3);
 
-
-        return answerX;
+        System.out.printf("x1 = %.3f%n",answerX[0]);
+        System.out.printf("x2 = %.3f%n",answerX[1]);
+        System.out.printf("x3 = %.3f%n",answerX[2]);
+        System.out.printf("x4 = %.3f%n",answerX[3]);
     }
 }

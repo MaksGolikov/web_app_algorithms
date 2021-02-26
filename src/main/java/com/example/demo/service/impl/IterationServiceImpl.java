@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class IterationServiceImpl implements IterationService {
     @Override
     public void calculation(IterationData iterationData) {
-        CalculationUtil.calc(iterationData);
+        double [] answerX = CalculationUtil.calc(iterationData);
     }
 
     @Override

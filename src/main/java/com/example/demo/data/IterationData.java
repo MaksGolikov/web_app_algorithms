@@ -2,7 +2,9 @@ package com.example.demo.data;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Getter
 @Setter
 public class IterationData {
@@ -27,33 +29,5 @@ public class IterationData {
     private double x33;
 
     private double b0;
-    private double b1;
-    private double b2;
-    private double b3;
 
-    @Override
-    public String toString() {
-        return "IterationData{" +
-                "x00=" + x00 +
-                ", x01=" + x01 +
-                ", x02=" + x02 +
-                ", x03=" + x03 +
-                ", x10=" + x10 +
-                ", x11=" + x11 +
-                ", x12=" + x12 +
-                ", x13=" + x13 +
-                ", x20=" + x20 +
-                ", x21=" + x21 +
-                ", x22=" + x22 +
-                ", x23=" + x23 +
-                ", x30=" + x30 +
-                ", x31=" + x31 +
-                ", x32=" + x32 +
-                ", x33=" + x33 +
-                ", b0=" + b0 +
-                ", b1=" + b1 +
-                ", b2=" + b2 +
-                ", b3=" + b3 +
-                '}';
-    }
 }

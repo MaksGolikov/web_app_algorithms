@@ -5,20 +5,22 @@
     <title>Iteration</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href=".style-for-input.css">
-    <link rel="stylesheet"  type="text/css" href="./style-for-main-form.css">
-    <!--<style>
+    <link rel="stylesheet" type="text/css" href="style-for-input.css">
+    <link rel="stylesheet" type="text/css" href="style-for-main-form.css">
+
+    <style>
         .class {
             text-align: center;
             margin-top: 100px;
 
         }
+
         .style-input:focus {
             background-color: lightblue;
             border: none;
         }
 
-        .main-submit{
+        .main-submit {
             background-color: #18c12d;
             border: none;
             color: white;
@@ -28,67 +30,68 @@
             cursor: pointer;
             border-radius: 25px;
         }
-    </style>-->
+    </style>
 
 </head>
 <body>
 <div class="class">
     <form action="/" method="post">
         <label id="x00" for="x00">x00</label>
-        <input class="style-input" type="text" name="x00">
+        <input class="style-input" type="text" name="x00" size="1">
         <label id="x01" for="x01">x01</label>
-        <input class="style-input" type="text" name="x01">
+        <input class="style-input" type="text" name="x01" size="1">
         <label id="x02" for="x02">x02</label>
-        <input class="style-input" type="text" name="x02">
+        <input class="style-input" type="text" name="x02" size="1">
         <label id="x03" for="x03">x03</label>
-        <input class="style-input" type="text" name="x03">
+        <input class="style-input" type="text" name="x03" size="1">
 
-        <label id="b0" for="x01">b0</label>
-        <input class="style-input" type="text" name="b0">
+        <label id="b0" for="b0"> = 15*m</label>
 
         <p></p>
 
         <label id="x10" for="x10">x10</label>
-        <input class="style-input" type="text" name="x10">
+        <input class="style-input" type="text" name="x10" size="1">
         <label id="x11" for="x11">x11</label>
-        <input class="style-input" type="text" name="x11">
+        <input class="style-input" type="text" name="x11" size="1">
         <label id="x12" for="x12">x12</label>
-        <input class="style-input" type="text" name="x12">
+        <input class="style-input" type="text" name="x12" size="1">
         <label id="x13" for="x13">x13</label>
-        <input class="style-input" type="text" name="x13">
+        <input class="style-input" type="text" name="x13" size="1">
 
-        <label id="b1" for="x01">b1</label>
-        <input class="style-input" type="text" name="b1">
+        <label id="b1" for="b1"> = m-6</label>
 
         <p></p>
 
         <label id="x20" for="x20">x20</label>
-        <input class="style-input" type="text" name="x20">
+        <input class="style-input" type="text" name="x20" size="1">
         <label id="x21" for="x21">x21</label>
-        <input class="style-input" type="text" name="x21">
+        <input class="style-input" type="text" name="x21" size="1">
         <label id="x22" for="x22">x22</label>
-        <input class="style-input" type="text" name="x22">
+        <input class="style-input" type="text" name="x22" size="1">
         <label id="x23" for="x23">x23</label>
-        <input class="style-input" type="text" name="x23">
+        <input class="style-input" type="text" name="x23" size="1">
 
-        <label id="b2" for="x01">b2</label>
-        <input class="style-input" type="text" name="b2">
+        <label id="b2" for="b2"> = 15-m</label>
 
         <p></p>
 
         <label id="x30" for="x30">x30</label>
-        <input class="style-input" type="text" name="x30">
+        <input class="style-input" type="text" name="x30" size="1">
         <label id="x31" for="x31">x31</label>
-        <input class="style-input" type="text" name="x31">
+        <input class="style-input" type="text" name="x31" size="1">
         <label id="x32" for="x32">x32</label>
-        <input class="style-input" type="text" name="x32">
+        <input class="style-input" type="text" name="x32" size="1">
         <label id="x33" for="x33">x33</label>
-        <input class="style-input" type="text" name="x33">
+        <input class="style-input" type="text" name="x33" size="1">
 
-        <label id="b3" for="x01">b3</label>
-        <input class="style-input" type="text" name="b3">
+        <label id="b3" for="b3"> = m+2</label>
 
         <p></p>
+        <label>Initial approximation : х(0) = (0,7m; 1; 2; 0,5)</label>
+        <p></p>
+
+        <label id="m" for="m">m - your № in list</label>
+        <input class="style-input" type="text" name="m">
 
         <input class="main-submit" type="submit">
 

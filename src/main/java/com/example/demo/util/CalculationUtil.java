@@ -10,13 +10,16 @@ public class CalculationUtil {
     private static final int sizeOfMatrix = 4;
 
     public static double[] calc(IterationData iterationData) {
+
+        //create arr of coefficient
         double[][] arrOfCoefficient = {
                 {iterationData.getX00(), iterationData.getX01(), iterationData.getX02(), iterationData.getX03()},
                 {iterationData.getX10(), iterationData.getX11(), iterationData.getX12(), iterationData.getX13()},
                 {iterationData.getX20(), iterationData.getX21(), iterationData.getX22(), iterationData.getX23()},
                 {iterationData.getX30(), iterationData.getX31(), iterationData.getX32(), iterationData.getX33()}
-        };  //new double[3][3];
+        };
 
+        //make copy of arr
         double[][] copyArrOfCoefficient = new double[sizeOfMatrix][sizeOfMatrix];
         for (int i = 0; i < sizeOfMatrix; i++) {
             for (int j = 0; j < sizeOfMatrix; j++) {
@@ -24,16 +27,18 @@ public class CalculationUtil {
             }
         }
 
+        //create arr of answer
         double[] arrOfAnswer = {
                 3 * iterationData.getB0(), iterationData.getB0() - 6, 15 - iterationData.getB0(), iterationData.getB0() + 2
         };
 
-        for (int i = 0; i < 4; i++) {
-            System.out.println( arrOfAnswer[i]+" ++++++++++");
-        }
+        //check determinant
         double determinant = DeterminantUtil.determinant(sizeOfMatrix, arrOfCoefficient);
+        if(determinant==0){
+            System.exit(1);
+        }
 
-
+        //check условние преобладания
         double sum = 0;
         for (int i = 0; i < sizeOfMatrix; i++) {
             sum = 0;
@@ -46,6 +51,7 @@ public class CalculationUtil {
             }
         }
 
+        //create some temp lists
         List<Double> list0fXOnMainDiagonal = new ArrayList<>(4);
         list0fXOnMainDiagonal.add(0.0);
         list0fXOnMainDiagonal.add(0.0);
@@ -64,11 +70,10 @@ public class CalculationUtil {
         listOfInitialApproximation.add(2.0);
         listOfInitialApproximation.add(0.5);
 
-        for (int i = 0; i < 4; i++) {
-            System.out.println(listOfInitialApproximation.get(i)+" ++++++++++++++");
-        }
+
         double [] answerX = new double[sizeOfMatrix];
 
+        //calculation
         int k = 0;
         M : while (true) {
 
@@ -115,6 +120,7 @@ public class CalculationUtil {
 
             System.out.println( );
 
+            //check second end etc. iteration
             if(k>=1){
                 for (int i = 0; i < 4; i++) {
                     double a = Math.abs(list0fXOnMainDiagonal.get(i))-Math.abs(listOfInitialApproximation.get(i));
@@ -134,11 +140,13 @@ public class CalculationUtil {
             k++;
         }
 
+        //fill the array answer of x
         answerX[0]=list0fXOnMainDiagonal.get(0);
         answerX[1]=list0fXOnMainDiagonal.get(1);
         answerX[2]=list0fXOnMainDiagonal.get(2);
         answerX[3]=list0fXOnMainDiagonal.get(3);
 
+        //print in console
         System.out.printf("x1 = %.3f%n",answerX[0]);
         System.out.printf("x2 = %.3f%n",answerX[1]);
         System.out.printf("x3 = %.3f%n",answerX[2]);

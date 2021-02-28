@@ -23,13 +23,12 @@ public class IterationController {
     }
 
     @GetMapping("/create")
-    public String newIter(Model model){
-        model.addAttribute("iter", new IterationData());
+    public String home(){
         return "home";
     }
 
     @PostMapping()
-    public String post(@ModelAttribute("data") IterationData iterationData){
+    public String post(IterationData iterationData){
         iterationService.calculation(iterationData);
         return "redirect:/result";
     }

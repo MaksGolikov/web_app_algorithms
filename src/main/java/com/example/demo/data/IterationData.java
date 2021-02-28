@@ -1,10 +1,5 @@
 package com.example.demo.data;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-
 public class IterationData {
     private double x00;
     private double x01;

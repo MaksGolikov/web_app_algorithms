@@ -152,6 +152,27 @@ public class CalculationUtil {
         System.out.printf("x3 = %.3f%n",answerX[2]);
         System.out.printf("x4 = %.3f%n",answerX[3]);
 
+        double[] checkSum = new double[sizeOfMatrix];
+        checkSum[0] = iterationData.getX00() * answerX[0] +
+                iterationData.getX01() * answerX[1] +
+                iterationData.getX02() * answerX[2] +
+                iterationData.getX03() * answerX[3];
+        checkSum[1] = iterationData.getX10() * answerX[0] +
+                iterationData.getX11() * answerX[1] +
+                iterationData.getX12() * answerX[2] +
+                iterationData.getX13() * answerX[3];
+        checkSum[2] = iterationData.getX20() * answerX[0] +
+                iterationData.getX21() * answerX[1] +
+                iterationData.getX22() * answerX[2] +
+                iterationData.getX23() * answerX[3];
+        checkSum[3] = iterationData.getX30() * answerX[0] +
+                iterationData.getX31() * answerX[1] +
+                iterationData.getX32() * answerX[2] +
+                iterationData.getX33() * answerX[3];
+
+        for (int i = 0; i < sizeOfMatrix; i++) {
+            System.out.println(i +" line equals = "+checkSum[i]);
+        }
 
         return answerX;
     }

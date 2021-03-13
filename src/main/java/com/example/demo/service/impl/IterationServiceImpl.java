@@ -2,8 +2,7 @@ package com.example.demo.service.impl;
 
 import com.example.demo.data.IterationData;
 import com.example.demo.service.IterationService;
-import com.example.demo.util.CalculationUtil;
-import com.example.demo.util.CalculationUtilNew;
+import com.example.demo.util.IterationMethodUtil;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,7 +11,7 @@ public class IterationServiceImpl implements IterationService {
     @Override
     public void calculation(IterationData iterationData) {
         //double [] answerX = CalculationUtil.calc(iterationData);
-        double [] answerX = CalculationUtilNew.calc(iterationData);
+        double [] answerX = IterationMethodUtil.calc(iterationData);
         String result1 = String.format("%.3f", answerX[0]);
         String result2 = String.format("%.3f", answerX[1]);
         String result3 = String.format("%.3f", answerX[2]);

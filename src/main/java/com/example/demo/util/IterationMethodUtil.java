@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CalculationUtilNew {
+public class IterationMethodUtil {
     private static final int sizeOfMatrix = 4;
     private static final double[] tempArrOfAnswer = new double[sizeOfMatrix];
 

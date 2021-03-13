@@ -16,21 +16,21 @@ public class IterationController {
         this.iterationService = iterationService;
     }
 
-    @GetMapping("/result")
+    @GetMapping("/result_iter")
     public String show(Model model) {
         model.addAttribute("result", iterationService.show());
         return "result";
     }
 
-    @GetMapping("/create")
-    public String home(){
-        return "home";
+    @GetMapping("/iter_method")
+    public String iteration(){
+        return "iteration_method";
     }
 
     @PostMapping()
     public String post(IterationData iterationData){
         iterationService.calculation(iterationData);
-        return "redirect:/result";
+        return "redirect:/result_iter";
     }
 
 }

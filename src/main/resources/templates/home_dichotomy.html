@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/style-for-div.css">
 </head>
 <body>
-
+<div class="main">
+    <div class="main__item">
+        <label for="equation">The equation</label>
+        <!--<p id="equation">x<sup>3</sup>-2,8x<sup>2</sup>-6,2*x+3,7=0</p>-->
+        <p id="equation">0,2*x<sup>3</sup>+0,7*x<sup>2</sup>-3,7*x+2,3=0</p>
+    </div>
+    <div class="main__item">
+        <label for="acc">Accuracy</label>
+        <p id="acc">e = 0,0001</p>
+    </div>
+    <div class="main__item">
+        <label for="interval">Interval</label>
+        <p id="interval">0,1</p>
+    </div>
+    <form action="/home_dichotomy" method="post">
+        <div class="main__item">
+            <label>Enter range</label>
+            <input type="text" size="1" value="-100" name="left">
+            <input type="text" size="1" value="100" name="right">
+            <input type="submit">
+        </div>
+    </form>
+</div>
 </body>
 </html>

@@ -5,7 +5,6 @@ import com.example.demo.service.IterationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -19,15 +18,15 @@ public class IterationController {
     @GetMapping("/result_iter")
     public String show(Model model) {
         model.addAttribute("result", iterationService.show());
-        return "result";
+        return "iteration_result";
     }
 
     @GetMapping("/iter_method")
     public String iteration(){
-        return "iteration_method";
+        return "home_iteration";
     }
 
-    @PostMapping()
+    @PostMapping("/iter_method")
     public String post(IterationData iterationData){
         iterationService.calculation(iterationData);
         return "redirect:/result_iter";

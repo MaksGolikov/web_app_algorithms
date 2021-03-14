@@ -21,7 +21,6 @@ public class IterationServiceImpl implements IterationService {
 
     @Override
     public String show() {
-        //return StringUtil.answer();
         return str;
     }
 }

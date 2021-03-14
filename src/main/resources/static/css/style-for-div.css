@@ -1,0 +1,19 @@
+.main
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.main__item
+{
+    width: 200px;
+    height: 58px;
+    background-color: white;
+    color: black;
+    border: 2px solid orange;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

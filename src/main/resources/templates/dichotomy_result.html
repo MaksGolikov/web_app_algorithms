@@ -5,6 +5,13 @@
     <title>Result</title>
 </head>
 <body>
-    <p th:text="*{result}"></p>
+    <label for="root">Intervals at which roots exist</label>
+    <p th:text="*{rootIntervalIsolation}" id="root"></p>
+
+    <th:block th:each=" res : ${result}">
+        <p th:text="${res}"></p>
+    </th:block>
+
+
 </body>
 </html>

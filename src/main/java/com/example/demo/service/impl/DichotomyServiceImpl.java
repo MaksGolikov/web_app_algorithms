@@ -71,7 +71,7 @@ public class DichotomyServiceImpl implements DichotomyService {
             fX = DichotomyUtil.calcFuncFromParam(x);
             multipleFaFx = fA * fX;
             while (true) {
-                if (multipleFaFx >= 0) {
+                if (multipleFaFx > 0) {
                     leftBorder = x;
                 }
                 if (multipleFaFx < 0) {
